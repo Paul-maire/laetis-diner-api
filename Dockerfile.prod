@@ -1,4 +1,4 @@
-FROM node:12.18-alpine
+FROM node:lts-alpine
 
 RUN mkdir -p /laetis-diner-api
 COPY . /laetis-diner-api
@@ -6,7 +6,7 @@ WORKDIR /laetis-diner-api
 
 RUN set -ex; \
     apk add postgresql-client; \
-    yarn global add knex;
+    yarn global add knex pg;
 
 RUN yarn install
 
@@ -14,5 +14,4 @@ ENV NODE_ENV=production
 
 COPY . /laetis-diner-api
 
-EXPOSE 4000
-
+EXPOSE 5000
