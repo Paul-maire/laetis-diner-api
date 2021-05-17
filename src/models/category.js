@@ -1,3 +1,4 @@
+const knex = require('../../db/knex')
 const Category = require('./models')('categories')
 
 Category.recipes = id => knex('recipes_categories')

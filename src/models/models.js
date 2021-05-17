@@ -1,4 +1,7 @@
-module.exports = table => knex => ({
+const config = require('../../knexfile.js')
+const knex = require('knex')(config)
+
+module.exports = table => ({
 	// Methods
 	all(where = null) {
 		const query = this.table()

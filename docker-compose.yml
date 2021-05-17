@@ -12,9 +12,10 @@ services:
       DATABASE_URL: postgres://paul:postgres@db:5432/laetis_diner
     volumes:
       - .:/laetis-diner-api
+      - /laetis-diner-api/node_modules
 
   db:
-    image: postgres:11.2-alpine
+    image: postgres:alpine
     environment:
       POSTGRES_USER: paul
       POSTGRES_PASSWORD: postgres

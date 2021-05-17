@@ -10,7 +10,8 @@
     "sh": "docker-compose exec laetis-diner-api sh",
     "dev": "nodemon src/index.js",
     "start": "node src/index.js",
-    "db": "docker-compose exec db psql -U paul"
+    "db": "docker-compose exec db psql -U paul",
+    "migrate:latest": "./node_modules/knex/bin/cli.js migrate:latest"
   },
   "dependencies": {
     "apollo-server": "^2.9.6",
@@ -19,9 +20,9 @@
     "graphql-iso-date": "^3.6.1",
     "graphql-type-json": "^0.3.0",
     "i18next": "^19.8.3",
-    "knex": "^0.19.5",
+    "knex": "^0.95.5",
     "moment": "^2.27.0",
     "nodemon": "^1.19.3",
-    "pg": "^7.12.1"
+    "pg": "^8.6.0"
   }
 }
