@@ -25,7 +25,10 @@ module.exports = gql`
     id: Int!
     title: String!
 
+    image: String!
+
     categories: [Category!]
+    categories_id: [Int!]
     difficulty: String! @intl
     done: Boolean!
 
